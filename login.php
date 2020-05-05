@@ -19,8 +19,18 @@
                 <input type="password" class="form-control" name="password" id="exampleInputPassword1">
         </div>
         
+
             <button type="submit" class="btn btn-primary">Submit</button>
             </form>
-    </div>        
+
+            <form action="views/logout.php" method="post" class="align-self-end">
+                <button type="submit" class="btn btn-danger" name="button-logout">Logout</button>
+            </form>
+    </div> 
+    
+    
+        
+    
+
 </body>
 </html>
