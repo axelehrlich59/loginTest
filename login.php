@@ -20,20 +20,11 @@
         </div>
         
 
-            <button type="submit" class="btn btn-primary" name="button-submit">Submit</button>
+            <button type="submit" class="btn btn-primary" name="button-submit">Login</button>
             </form>
 
-            <form action="views/logout.php" method="post" class="align-self-end">
-                <button type="submit" class="btn btn-danger" name="button-logout">Logout</button>
-            </form>
+         
     </div> 
-    
-    
-        <div>
-            <p>Vous êtes déconnecté</p><br>
-            <p>Vous êtes connecté</p>
-            
-        </div>
     
 
 </body>
