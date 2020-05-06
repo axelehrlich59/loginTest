@@ -5,6 +5,7 @@ if(isset($_POST['button-submit'])) {
       
      $username = $_POST['email'];
      $password = $_POST['password'];
+     $userId = $_POST['idUser'];
 
 
      if(empty($username) || empty($password)) {
@@ -35,7 +36,7 @@ if(isset($_POST['button-submit'])) {
             exit();
             }
             else {
-                $sql = "INSERT INTO user (idUser, emailUser, mdpUser) VALUES (?, ?, ?)";
+                $sql = "INSERT INTO user (emailUser, mdpUser, idUser) VALUES (?, ?, ?)";
                 $stmt = mysqli_stmt_init($db);  
                 if (!mysqli_stmt_prepare($stmt, $sql)) {
                     header("Location: ../login.php?error=sqlerror");
@@ -44,7 +45,7 @@ if(isset($_POST['button-submit'])) {
                 else {
                     $hashedPwd = password_hash($password, PASSWORD_DEFAULT);
 
-                    mysqli_stmt_bind_param($stmt, "ss", $username, $password);
+                    mysqli_stmt_bind_param($stmt, "sss", $username, $password, $userId);
                     mysqli_stmt_execute($stmt);
                     header("Location: ../views/access.php?success");
                             exit();
