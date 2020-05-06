@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="form-container d-flex justify-content-center mt-5">
-        <form method="post" action="views/access.php">
+        <form method="post" action="views/access.inc.php">
         <div class="form-group">
                 <label for="exampleInputEmail1">Email address</label>
                 <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp">
@@ -20,7 +20,7 @@
         </div>
         
 
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary" name="button-submit">Submit</button>
             </form>
 
             <form action="views/logout.php" method="post" class="align-self-end">
@@ -29,7 +29,11 @@
     </div> 
     
     
-        
+        <div>
+            <p>Vous êtes déconnecté</p><br>
+            <p>Vous êtes connecté</p>
+            
+        </div>
     
 
 </body>
