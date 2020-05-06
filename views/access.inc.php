@@ -46,7 +46,7 @@ if(isset($_POST['button-submit'])) {
 
                     mysqli_stmt_bind_param($stmt, "ss", $username, $password);
                     mysqli_stmt_execute($stmt);
-                    header("Location: ../login.php?signup=success");
+                    header("Location: ../views/access.php?success");
                             exit();
                 }
             }
