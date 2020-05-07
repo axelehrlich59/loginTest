@@ -43,9 +43,9 @@ if(isset($_POST['button-submit'])) {
                     exit();
                 }
                 else {
-                    $hashedPwd = password_hash($password, PASSWORD_DEFAULT);
+                    $hashedPwd = password_hash($password, PASSWORD_DEFAULT); 
 
-                    mysqli_stmt_bind_param($stmt, "sss", $username, $password, $userId);
+                    mysqli_stmt_bind_param($stmt, "sss", $username, $hashedPwd, $userId);
                     mysqli_stmt_execute($stmt);
                     header("Location: ../views/access.php?success");
                             exit();
