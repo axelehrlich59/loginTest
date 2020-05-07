@@ -8,7 +8,11 @@
 </head>
 <body>
     <div class="form-container d-flex justify-content-center mt-5">
-        <form method="post" action="views/access.inc.php">
+        <form method="post" action="views/submit.inc.php">
+        <div class="form-group">
+                <label for="">Name account</label>
+                <input type="text" class="form-control" name="mailuid">
+        </div>
         <div class="form-group">
                 <label for="exampleInputEmail1">Email address</label>
                 <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp">
