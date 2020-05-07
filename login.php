@@ -1,3 +1,8 @@
+<?php
+session_start();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,9 +14,13 @@
 <body>
     <div class="form-container d-flex justify-content-center mt-5">
         <form method="post" action="views/submit.inc.php">
-        <div class="form-group">
+      <!--  <div class="form-group">
                 <label for="">Name account</label>
                 <input type="text" class="form-control" name="mailuid">
+        </div> --> 
+        <div class="form-group">
+                <label for="">Name account</label>
+                <input type="text" class="form-control" name="uidUsers">
         </div>
         <div class="form-group">
                 <label for="exampleInputEmail1">Email address</label>
@@ -22,13 +31,14 @@
                 <label for="exampleInputPassword1">Password</label>
                 <input type="password" class="form-control" name="password" id="exampleInputPassword1">
         </div>
+        
         <div class="form-group d-none">
                 <label for="exampleInputPassword1">Name account</label>
                 <input type="text" class="form-control" name="idUser" id="exampleInputPassword1">
         </div>
         
 
-            <button type="submit" class="btn btn-primary" name="button-submit">Login</button>
+            <button type="submit" class="btn btn-primary" name="button-submit">Sign up</button>
             </form>
 
          
